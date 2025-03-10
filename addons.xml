@@ -26,7 +26,7 @@
 </addon>
 
 <!-- <addon id="plugin.video.example" version="2.3.2" name="Example Kodi Video Plugin" provider-name="Roman_V_M"> -->
-<addon id="plugin.video.StreamFreedom"  version="0.00.001" name="Freedom 4 SreamArmy Addons" provider-name="twudat">
+<addon id="plugin.video.StreamFreedom"  version="0.00.001" name="StreamFreedom StreamArmy patcher" provider-name="twudat">
 
 <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -37,8 +37,8 @@
   <provides>video</provides>
 </extension>
 <extension point="xbmc.addon.metadata">
-  <summary lang="en">Freedom 4 XXX-O-DUS Patcher</summary>
-  <description lang="en_GB">Freedom 4 SreamArmy patches all StreamArmy Addons and sets them free from the pin system and obfuscated code</description>
+  <summary lang="en">StreamFreedom StreamArmy patcher</summary>
+  <description lang="en_GB">StreamFreedom StreamArmy patcher - patches all StreamArmy Addons and sets them free from the pin system and obfuscated code</description>
   <disclaimer lang="en_GB">All care taken, No responibilty accepted</disclaimer>
   <assets>
     <icon>icon.png</icon>
