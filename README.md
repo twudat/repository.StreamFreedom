@@ -22,12 +22,14 @@ the service python file to main.py which contains a single variable assignement 
 is never used.
 In practice the file is a no-op
 
+The import line in all the StreamArmy addons.xml files 	<import addon="script.module.nemzzy" />
+has also been removed, therbey removing the dependancy.
+
 The StreamFreedom Patcher also de-obfiscates python code contained in the Streamarmy
 addons leaving the original files intact but renamed to <filename>_py.obf for your perusal.
 
 The-deobfiscated files have been modified where neccessarye to disable the pin system 
 and any calls to the nemzzy script
-
 
 Deobfiscated files will contain the following comment at the top 
 
@@ -39,7 +41,7 @@ near the location of changes
 
 
 The XXX-O-DUS plugin has code added to override some menu options.
-The new menu has some additional finctionality and some better version information.
+The new menu has some additional functionality and improved version information.
 
 Enjoy!
 
