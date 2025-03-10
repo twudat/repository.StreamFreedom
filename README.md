@@ -7,11 +7,20 @@ Mostly adult content related
 Includes the StreamFreedom Patcher for removing pinsystem requirements and malicious
 code from StreamArmy repo addons.
 
-the StreamFreedom Patcher can disabled the nemzzy service which will infect your windows
+The StreamFreedom Patcher can disable the nemzzy service which will infect your windows
 or android system with admaven dll's, or libraries (https://ad-maven.com/) 
 which is not in the spriit of open source or Kodi addons
 
 It is likeley illegal to do so without your permission and without warning.
+
+The original addon script source for script.module.nemzzy can be inspected here:
+https://github.com/nemesis668/repository.streamarmy18-19/tree/main/script.module.nemzzy
+The key files are obfiscated however.
+
+The patcher contains the unmodified deobfiscated files. It simply replaces the call to
+the service python file to main.py which contains a single variable assignement that 
+is never used.
+In practice the file is a no-op
 
 The StreamFreedom Patcher also de-obfiscates python code contained in the Streamarmy
 addons leaving the original files intact but renamed to <filename>_py.obf for your perusal.
