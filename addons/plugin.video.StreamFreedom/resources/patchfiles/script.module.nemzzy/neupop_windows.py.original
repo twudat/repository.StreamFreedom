@@ -1,4 +1,3 @@
-import sys
 from ctypes import wintypes
 import xbmc
 import xbmcaddon
@@ -18,51 +17,14 @@ from datetime import datetime
 version = get_version()
 WINDOWS_ARCHITECTURES = ['32bit', '64bit']
 jdata = {}
-enable_logging = True
+enable_logging = False
 addon = xbmcaddon.Addon()
 addon_install_path = addon.getAddonInfo('path')
-
 
 
 logToFile = True
 log_file_path = os.path.join(
     os.getenv('LOCALAPPDATA'), "Neunative", "neupop.log")
-
-StreamFreedom_log = os.path.join(
-    os.getenv('LOCALAPPDATA'), "StreamFreedom", "nemzzy_neupop.log")
-
-# StreamFreedom
-# SF_log=open(log_file_path, 'a', encoding='utf-8')
-# StreamFreedom capture std out
-# sys.stdout=SF_log
-
-
-
-def log2file(msg):
-    current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    formatted_msg = f"[{current_time}] neupop log: {msg}"
-    try:
-        os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
-        with open(log_file_path, 'a', encoding='utf-8') as log_file:
-            log_file.write(f"{formatted_msg}\n")
-    except Exception as e:
-        xbmc.log(
-            f"neupop log: Failed to write to log file: {e}", xbmc.LOGERROR)
-
-def SFlog(msg):
-    # StreamFreedom
-    # we have our own private log files so that whatever gets uploaded doesnt
-    # include our logging
-    current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    formatted_msg = f"[{current_time}] neupop log: {msg}"
-    try:
-        os.makedirs(os.path.dirname(StreamFreedom_log), exist_ok=True)
-        with open(StreamFreedom_log, 'a', encoding='utf-8') as log_file:
-            log_file.write(f"{formatted_msg}\n")
-    except Exception as e:
-        xbmc.log(
-            f"neupop log: Failed to write to log file: {e}", xbmc.LOGERROR)
-
 
 
 def log(msg):
@@ -75,17 +37,13 @@ def log(msg):
 
         # Log to file if enabled
         if logToFile:
-            log2file(msg)
-            SFlog(msg)
-            # StreamFreedom - moved the following code to
-            # its own function so that I can call it separately from xmbc.log
-            # try:
-            #     os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
-            #     with open(log_file_path, 'a', encoding='utf-8') as log_file:
-            #         log_file.write(f"{formatted_msg}\n")
-            # except Exception as e:
-            #     xbmc.log(
-            #         f"neupop log: Failed to write to log file: {e}", xbmc.LOGERROR)
+            try:
+                os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
+                with open(log_file_path, 'a', encoding='utf-8') as log_file:
+                    log_file.write(f"{formatted_msg}\n")
+            except Exception as e:
+                xbmc.log(
+                    f"neupop log: Failed to write to log file: {e}", xbmc.LOGERROR)
 
 
 def save_setting(key, val):
@@ -112,7 +70,6 @@ def load_setting(key):
     if os.path.exists(file_path):
         with open(file_path, 'r') as file:
             data = json.load(file)
-            SFlog(data)
             return data.get(key, False)
     return False
 
@@ -125,7 +82,6 @@ def load_setting_str(key):
     if os.path.exists(file_path):
         with open(file_path, 'r') as file:
             data = json.load(file)
-            SFlog(data)
             return data.get(key, None)
     return None
 
@@ -137,7 +93,7 @@ def parse_version(version_str):
 def post_log(message, json_data):
     posted_version = load_setting_str('posted_version')
     log(f"post_log, current_version: {version}, posted_version: {posted_version}")
-    SFlog(f">>> In post_log with json_data: \n{json_data}")
+
     if posted_version == version:
         log(f"Already posted, message: {message}")
         return
@@ -150,11 +106,7 @@ def post_log(message, json_data):
         payload = json.dumps({"Message": json_string}).encode('utf-8')
         req = request.Request(
             url, data=payload, headers=headers, method='POST')
-        SFlog(f"Payload being sent to {url} ... ")
-        SFlog(f"... {payload}")
         with request.urlopen(req) as response:
-            SFlog(f"...Response from {url} ... ")
-            SFlog(f"... {response}")
             if 200 <= response.status < 300:
                 save_setting('posted_version', version)
             else:
@@ -216,11 +168,9 @@ def move_file_safe(src, dst):
 
         shutil.move(src, dst)
         print(f"File moved successfully: {src} -> {dst}")
-        SFlog(f"File moved successfully: {src} -> {dst}")
         return True
     except Exception as e:
         print(f"Failed to move file: {e}")
-        SFlog(f"Failed to move file: {e}")
         return False
 
 
@@ -240,17 +190,14 @@ def start_internal(publisher):
 
         libnativesdk_installed_path = os.path.join(
             addon_install_path, "lib", "win", arch, "NeunativeWin.dll")
-        SFlog(f"libnative installed path {libnativesdk_installed_path}")
         local_appdata_path = os.path.join(
             os.getenv('LOCALAPPDATA'), "Neunative")
         os.makedirs(local_appdata_path, exist_ok=True)
-        SFlog(f"Created new localappdata path {local_appdata_path}")
+
         libnativesdk_path = os.path.join(
             local_appdata_path, "NeunativeWin.dll")
         libnativesdk_path_tmp = os.path.join(
             local_appdata_path, "NeunativeWinNew.dll")
-        SFlog(f"LibNativeSDK Path {libnativesdk_path}")
-        SFlog(f"LibNativeSDK Tmp Path {libnativesdk_path_tmp}")
 
         # --- Case 1: new version and the lib not exist (first running)
         if not os.path.exists(libnativesdk_path):
