@@ -29,10 +29,10 @@ Changes to files will be commented with
 near the location of changes
 
 
-The XXX-O-DUS plugin has code added to override some menu options
-The new menu has some additional finctionality and some better version information
+The XXX-O-DUS plugin has code added to override some menu options.
+The new menu has some additional finctionality and some better version information.
 
-Enjoy
+Enjoy!
 
 
 
