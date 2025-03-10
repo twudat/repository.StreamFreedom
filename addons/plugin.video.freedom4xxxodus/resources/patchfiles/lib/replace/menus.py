@@ -15,7 +15,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
-# Deobfuscated by freedom4xxxodus from XXX-O-DUS version="5.00.023"
+# Deobfuscated by freedom4xxxodus
 
 from scrapers import *
 from scrapers import __all__

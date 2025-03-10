@@ -1,4 +1,4 @@
-# Deobfuscated by StreamFreedom from XXX-O-DUS version="5.00.023"
+# Deobfuscated by StreamFreedom
 # StreamFreedom patch
 def checkupdates():
     pass

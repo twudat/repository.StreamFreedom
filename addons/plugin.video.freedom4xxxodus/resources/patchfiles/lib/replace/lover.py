@@ -1,4 +1,4 @@
-# Deobfuscated by freedom4xxxodus from XXX-O-DUS version="5.00.023"
+# Deobfuscated by freedom4xxxodus
 # freedom4xxxodus patch
 def checkupdates():
     pass

@@ -1,4 +1,4 @@
-# Deobfuscated by StreamFreedom from XXX-O-DUS version="5.00.023"
+# Deobfuscated by StreamFreedom
 from kodi_six import xbmc, xbmcaddon, xbmcgui
 import sys
 import re

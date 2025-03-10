@@ -1,4 +1,4 @@
-# Deobfuscated by StreamFreedom from XXX-O-DUS version="5.00.023"
+# Deobfuscated by StreamFreedom
 from builtins import all,exec,len,open,quit,exit
 from kodi_six import xbmc,xbmcaddon,xbmcplugin,xbmcgui,xbmcvfs
 from six.moves.urllib.parse import parse_qs,quote_plus,urlparse,parse_qsl

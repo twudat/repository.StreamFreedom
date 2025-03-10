@@ -1,4 +1,3 @@
-# Deobfuscated by StreamFreedom from XXX-O-DUS version="5.00.023"
 import xbmc
 import xbmcaddon
 import xbmcplugin
@@ -95,35 +94,20 @@ def nemzzy():
                             'special://home/addons/%s' % checkadd, 'icon.png'))
                     xbmc.log(msg='ADDON OUT OF DATE ::: %s' %
                              checkadd, level=xbmc.LOGINFO)
-                    # dialog.notification("Nemzzy Service", "Addon %s Needs Updating" % checkadd.replace(
-                    #     'plugin.video.', '').title(), addonicon, 5000)
-    # StreamFreedom patch
-                    dontcare = dialog.yesno(heading="Nemzzy Service",
-                                       message= "Addon %s Needs Updating" % checkadd.replace('plugin.video.', '').title(),
-                                       nolabel="Cool",
-                                       yeslabel="Ok",
-                                       autoclose=30000,
-                                       defaultbutton=xbmcgui.DLG_YESNO_NO_BTN)
-                    # xbmc.sleep(5000)
+                    dialog.notification("Nemzzy Service", "Addon %s Needs Updating" % checkadd.replace(
+                        'plugin.video.', '').title(), addonicon, 5000)
+                    xbmc.sleep(5000)
             reader.close()
         else:
             pass
-
     registerpin = selfAddon.getSetting('pincheck')
     pingapi = requests.get(serviceapi2 % (
         Version, installed, app_version)).text
-    xbmc.log(msg='Nemzzy pingapi - version %s, installed %s, app_version' % (
-        Version, installed, app_version), level=xbmc.LOGINFO)
-    xbmc.log(msg='Nemxxy pingapi ::: %s' %
-                 pingapi, level=xbmc.LOGINFO)
     if registerpin.lower() == 'false':
         pingapi = requests.get(serviceapi % (Version, installed)).text
-        xbmc.log(msg='Nemxxy pingapi ::: %s' %
-                     pingapi, level=xbmc.LOGINFO)
-        selfAddon.setSetting('pincheck', 'False')
-    # main()
+        selfAddon.setSetting('pincheck', 'True')
+    main()
 
 
 if __name__ == "__main__":
-    # StreamFreedom patch
     nemzzy()

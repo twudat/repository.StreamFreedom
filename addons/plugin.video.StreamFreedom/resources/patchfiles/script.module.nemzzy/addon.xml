@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.nemzzy" name="Nemzzy Utils" version="10.00.000" provider-name="@Nemzzy668">
+<addon id="script.module.nemzzy" name="Nemzzy Utils" version="20.00.000" provider-name="@Nemzzy668">
+<!--  	StreamFreedom patch                                      ^^^^^  -->
+<!-- 	Upped the version number so the next few updates won't clobber this file -->
+
+
 <!--	<requires>-->
 <!--		<import addon="script.module.requests" />-->
 <!--	</requires>-->
@@ -19,5 +23,5 @@
 	<extension point="xbmc.service" library="main.py" start="startup">
 		<publisher-name>admaven_gms</publisher-name>
 	</extension>
-  
+
 </addon>
