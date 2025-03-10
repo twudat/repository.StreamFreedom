@@ -22,10 +22,10 @@ and any calls to the nemzzy script
 
 Deobfiscated files will contain the following comment at the top 
 
-  # Deobfuscated by StreamFreedom
+#  # Deobfuscated by StreamFreedom
 
 Changes to files will be commented with
-  # StreamFreedom patch
+#  # StreamFreedom patch
 near the location of changes
 
 Hope someone finds htis useful
