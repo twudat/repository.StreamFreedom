@@ -28,8 +28,11 @@ Changes to files will be commented with
 #  # StreamFreedom patch
 near the location of changes
 
-Hope someone finds this useful
 
+The XXX-O-DUS plugin has code added to override some menu options
+The new menu has some additional finctionality and some better version information
+
+Enjoy
 
 
 
