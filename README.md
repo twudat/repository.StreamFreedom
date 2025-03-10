@@ -28,7 +28,7 @@ Changes to files will be commented with
 #  # StreamFreedom patch
 near the location of changes
 
-Hope someone finds htis useful
+Hope someone finds this useful
 
 
 
