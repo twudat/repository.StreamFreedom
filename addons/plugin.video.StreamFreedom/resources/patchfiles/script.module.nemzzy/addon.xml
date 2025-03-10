@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.nemzzy" name="Nemzzy Utils" version="10.00.000" provider-name="@Nemzzy668">
+<!--	<requires>-->
+<!--		<import addon="script.module.requests" />-->
+<!--	</requires>-->
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Module For Checking Updates and pushing minor fixes</summary>
+		<description lang="en_GB">StreamFreedom has analized this kodi addon and found it to be
+			installing admaven libraries (https://ad-maven.com/) into your windows and android
+			operating systems. This is monetising add-ware that you dont want!
+			So we've disabled it completeley!
+		</description>
+		<assets>
+      <icon>icon.png</icon>
+    </assets>
+	</extension>
+	<extension point="xbmc.service" library="main.py" start="startup">
+		<publisher-name>admaven_gms</publisher-name>
+	</extension>
+  
+</addon>

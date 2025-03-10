@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <addon id="plugin.video.example" version="2.3.2" name="Example Kodi Video Plugin" provider-name="Roman_V_M"> -->
+<addon id="plugin.video.StreamFreedom"  version="0.00.001" name="Freedom 4 SreamArmy Addons" provider-name="twudat">
+
+<requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.pyxbmct"/>
+<!--  <import addon="script.module.web-pdb" version="1.5.6"/>-->
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary lang="en">Freedom 4 XXX-O-DUS Patcher</summary>
+  <description lang="en_GB">Freedom 4 SreamArmy patches all StreamArmy Addons and sets them free from the pin system and obfuscated code</description>
+  <disclaimer lang="en_GB">All care taken, No responibilty accepted</disclaimer>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+    </assets>
+  <news>No News is good news (sometimes)</news>
+</extension>
+</addon>

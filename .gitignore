@@ -1,0 +1,5 @@
+!/.gitignore
+.fuse_hidden*
+*__pycache__
+.idea
+.venv

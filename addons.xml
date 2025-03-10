@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<!-- <addon id="plugin.video.example" version="2.3.2" name="Example Kodi Video Plugin" provider-name="Roman_V_M"> -->
+<addon id="plugin.video.freedom4xxxodus"  version="0.00.001" name="Freedom 4 XXX-O-DUS Patcher" provider-name="twudat">
+
+<requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.pyxbmct"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary lang="en">Freedom 4 XXX-O-DUS Patcher</summary>
+  <description lang="en_GB">The FreeDom Patch patches XXX-O-DUS and sets it free from the pin system and obfuscated code</description>
+  <disclaimer lang="en_GB">All care taken, No responibilty accepted</disclaimer>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+    <screenshot>resources\screenshot-01.jpg</screenshot>
+    <screenshot>resources\screenshot-02.jpg</screenshot>
+    <screenshot>resources\screenshot-03.jpg</screenshot>
+  </assets>
+  <news>Updated with latest artwork metadata</news>
+</extension>
+</addon>
+
+<!-- <addon id="plugin.video.example" version="2.3.2" name="Example Kodi Video Plugin" provider-name="Roman_V_M"> -->
+<addon id="plugin.video.StreamFreedom"  version="0.00.001" name="Freedom 4 SreamArmy Addons" provider-name="twudat">
+
+<requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.pyxbmct"/>
+<!--  <import addon="script.module.web-pdb" version="1.5.6"/>-->
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary lang="en">Freedom 4 XXX-O-DUS Patcher</summary>
+  <description lang="en_GB">Freedom 4 SreamArmy patches all StreamArmy Addons and sets them free from the pin system and obfuscated code</description>
+  <disclaimer lang="en_GB">All care taken, No responibilty accepted</disclaimer>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+    </assets>
+  <news>No News is good news (sometimes)</news>
+</extension>
+</addon>
+
+<addon id="plugin.video.xxx-o-dus"
+	     name="XXX-O-DUS"
+	     version="5.00.023"
+	     provider-name="Originally By : Echo Coder :: Revived By @Nemzzy668">
+  <requires>
+    <!-- <import addon="xbmc.python" version="2.24.0"/> -->
+    <import addon="script.module.echo"/>
+    <import addon="script.xxxodus.artwork"/>
+    <import addon="script.xxxodus.scrapers"/>
+    <import addon="script.module.resolveurl"/>
+    <import addon="script.module.resolveurl.xxx"/>
+    <import addon="script.module.pyxbmct"/>
+	<import addon="script.module.requests" />
+	<import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.html5lib" />
+	<import addon="script.module.six" />
+	<import addon="script.module.kodi-six" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="startup">
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">[B]Addon Originally Created By EchoCoder, Now Maintained by @Nemzzy668 :: Massive Credit to @_PYDEV_ KingKong for the pyxbmct work to provide a stunning interface to view the dialogs in this addon and the GitHub issues! Also A huge credit to jokstergfx for the icons and fanarts in this addon and many others! Thank you![/B]</summary>
+    <description lang="en">[COLOR white]XXX-O-DUS scrapes many websites to bring you hundreds of thousands of videos. Features of the addon include, history monitoring, favourites, downloadable videos, parental controls and more![/COLOR]
+
+[COLOR white]Websites Include: Porn.com, PornHD.com, Chaturbate.com, RedTube.com, Xhamster.com, YouPorn.com, PornFun.com, Motherless.com,Porn00.org, Spankbang.com, Virtualpornstars.com, Watchxxxfree.com, Perfectgirls.net, XNXX.com and many more.[/COLOR]</description>
+    <disclaimer lang="en">The pages of this addon are designed for ADULTS only and may include pictures and materials that some viewers may find offensive. If you are under the age of 18, if such material offends you or if it is illegal to view such material in your community please exit the addon.</disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <website>https://github.com/Colossal1/plugin.video.xxx-o-dus</website>
+    <forum>https://github.com/Colossal1/plugin.video.xxx-o-dus</forum>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="repository.StreamFreedom" name="StreamFreedom Repo" version="1.00.00" provider-name="@Twudat">
+	<extension point="xbmc.addon.repository" name="free-xxx">
+		<dir>
+        <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+    </dir>
+		<dir>
+			<info compressed="false">https://github.com/twudat/repository.StreamFreedom/raw/main/addons.xml</info>
+			<checksum>https://github.com/twudat/repository.StreamFreedom/raw/main/addons.xml.md5</checksum>
+			<!-- <datadir zip="true">https://github.com/twudat/repository.Freedom/raw/main/zips/</datadir> -->
+			<datadir zip="true">https://github.com/twudat/repository.StreamFreedom/raw/main/zips/</datadir>
+		</dir>
+
+    <dir>
+  			<info compressed="false">https://raw.githubusercontent.com/nemesis668/repository.streamarmy18-19/main/plugin.video.xxx-o-dus/addon.xml</info>
+  			<!-- <checksum>https://raw.githubusercontent.com/nemesis668/repository.streamarmy18-19/main/addons.xml.md5</checksum> -->
+  			<datadir zip="true">https://raw.githubusercontent.com/nemesis668/repository.streamarmy18-19/main/zips/</datadir>
+  		</dir>
+
+    <dir>
+			<info compressed="false">https://raw.githubusercontent.com/dobbelina/repository.dobbelina/master/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/dobbelina/repository.dobbelina/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/dobbelina/repository.dobbelina/master/</datadir>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>StreamFreedom</summary>
+		<description>Repo For StreamFreedom  - The StreamArmy Patcher and other FREE Adult Kodi Plugins, Bought to you by @Twudat</description>
+		<disclaimer>Educational use only, not for public release.</disclaimer>
+		<platform>all</platform>
+		<assets>
+				<icon>icon.png</icon>
+				<fanart>fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+</addons>

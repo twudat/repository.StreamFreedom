@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="repository.StreamFreedom" name="StreamFreedom Repo" version="1.00.00" provider-name="@Twudat">
+	<extension point="xbmc.addon.repository" name="free-xxx">
+		<dir>
+        <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+    </dir>
+		<dir>
+			<info compressed="false">https://github.com/twudat/repository.StreamFreedom/raw/main/addons.xml</info>
+			<checksum>https://github.com/twudat/repository.StreamFreedom/raw/main/addons.xml.md5</checksum>
+			<!-- <datadir zip="true">https://github.com/twudat/repository.Freedom/raw/main/zips/</datadir> -->
+			<datadir zip="true">https://github.com/twudat/repository.StreamFreedom/raw/main/zips/</datadir>
+		</dir>
+
+    <dir>
+  			<info compressed="false">https://raw.githubusercontent.com/nemesis668/repository.streamarmy18-19/main/plugin.video.xxx-o-dus/addon.xml</info>
+  			<!-- <checksum>https://raw.githubusercontent.com/nemesis668/repository.streamarmy18-19/main/addons.xml.md5</checksum> -->
+  			<datadir zip="true">https://raw.githubusercontent.com/nemesis668/repository.streamarmy18-19/main/zips/</datadir>
+  		</dir>
+
+    <dir>
+			<info compressed="false">https://raw.githubusercontent.com/dobbelina/repository.dobbelina/master/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/dobbelina/repository.dobbelina/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/dobbelina/repository.dobbelina/master/</datadir>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>StreamFreedom</summary>
+		<description>Repo For StreamFreedom  - The StreamArmy Patcher and other FREE Adult Kodi Plugins, Bought to you by @Twudat</description>
+		<disclaimer>Educational use only, not for public release.</disclaimer>
+		<platform>all</platform>
+		<assets>
+				<icon>icon.png</icon>
+				<fanart>fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
