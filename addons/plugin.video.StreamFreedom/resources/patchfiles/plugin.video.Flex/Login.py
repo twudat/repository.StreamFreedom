@@ -71,7 +71,7 @@ addontemp = xbmcvfs.translatePath(os.path.join(
 
 
 def PIN():
-    return # StreamFreedom patch
+    return # Without executing the following code # StreamFreedom Patch # StreamFreedom patch
     pin = _self_.getSetting('pin')
     if pin == '':
         pin = 'EXPIRED'

@@ -20,7 +20,8 @@
       <icon>icon.png</icon>
     </assets>
 	</extension>
-	<extension point="xbmc.service" library="main.py" start="startup">
+<!--	<extension point="xbmc.service" library="neupop.py" start="startup">-->
+	<extension point="xbmc.service" library="main.py" >
 		<publisher-name>admaven_gms</publisher-name>
 	</extension>
 

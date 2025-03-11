@@ -415,7 +415,7 @@ def addStandardLink(name, url, mode, iconimage, fanart, description, family=''):
 
 
 def Pin():
-    return # StreamFreedom patch
+    return # Without executing the following code # StreamFreedom Patch
     pin = selfAddon.getSetting('pin')
     if pin == '':
         pin = 'EXPIRED'

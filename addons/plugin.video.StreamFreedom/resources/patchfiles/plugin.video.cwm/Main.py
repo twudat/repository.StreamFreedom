@@ -67,7 +67,7 @@ if CheckMonitor == 'true':
 
 
 def CheckPin():
-    return # StreamFreedom patch
+    return # Without executing the following code # StreamFreedom Patch
     pin = get_setting('PinCode')
     if pin == '':
         pin = 'EXPIRED'

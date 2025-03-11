@@ -1,7 +1,7 @@
 # Deobfuscated by StreamFreedom
 # StreamFreedom patch
 def checkupdates():
-    pass
+    return
 # from kodi_six import xbmc, xbmcaddon, xbmcplugin, xbmcgui, xbmcvfs
 # from six.moves.urllib.parse import parse_qs, quote_plus, urlparse, parse_qsl
 # from six import PY2

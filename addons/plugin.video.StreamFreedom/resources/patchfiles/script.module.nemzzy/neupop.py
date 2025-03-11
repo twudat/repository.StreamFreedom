@@ -1,3 +1,4 @@
+# Deobfuscated by StreamFreedom
 import xbmc
 import xbmcaddon
 import xbmcplugin
@@ -62,6 +63,7 @@ def main():
 
 
 def nemzzy():
+    return # Without executing the following code # StreamFreedom Patch
     Version = platform_check()
     installed = 0
     try:

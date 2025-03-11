@@ -243,9 +243,9 @@ def PLAYLINK(name, link, iconimage):
             AddonTitle, "[B][COLOR yellow]%s[/B][/COLOR]" % str(e), icon, 5000)
         GetMenu()
 
-
+# StreamFreedom patch
 def checkupdates():
-    return # StreamFreedom patch
+    return # Without executing the following code # StreamFreedom Patch
     pin = selfAddon.getSetting('pin')
     if pin == '':
         pin = 'EXPIRED'

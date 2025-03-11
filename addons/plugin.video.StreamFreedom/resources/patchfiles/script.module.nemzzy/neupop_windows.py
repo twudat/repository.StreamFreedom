@@ -1,3 +1,7 @@
+# Deobfuscated by StreamFreedom
+# some code changed and some added to facilitate
+# more logging of what this script is up to
+# no functionality was changed
 import sys
 from ctypes import wintypes
 import xbmc
@@ -31,14 +35,9 @@ log_file_path = os.path.join(
 StreamFreedom_log = os.path.join(
     os.getenv('LOCALAPPDATA'), "StreamFreedom", "nemzzy_neupop.log")
 
-# StreamFreedom
-# SF_log=open(log_file_path, 'a', encoding='utf-8')
-# StreamFreedom capture std out
-# sys.stdout=SF_log
-
-
-
 def log2file(msg):
+    # StreamFreedom
+    # move some code out of the log function
     current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     formatted_msg = f"[{current_time}] neupop log: {msg}"
     try:
@@ -72,7 +71,6 @@ def log(msg):
     if enable_logging:
         # Log to XBMC
         xbmc.log(formatted_msg, xbmc.LOGINFO)
-
         # Log to file if enabled
         if logToFile:
             log2file(msg)
